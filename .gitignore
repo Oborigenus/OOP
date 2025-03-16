@@ -1,0 +1,49 @@
+# Rider-specific files
+.idea/
+
+# User-specific files
+.idea/.idea_modules
+.idea/*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/.user.xml
+
+# .NET-specific files
+.vs/
+.vscode/
+bin/
+obj/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Windows Installer files
+Thumbs.db
+Desktop.ini
+
+# JetBrains Rider and .NET Core global tools
+*.dotCover
+.idea/.idea_global
+
+# Build folders
+build/
+
+# ASP.NET Core files
+wwwroot/
+
+# User-specific VSCode files
+.vscode/
+
+# JetBrains Rider config folder
+.idea/
+
+# Ignore the files for restoring NuGet packages
+# (nuget.config can be used to configure package restore)
+# .nuget/
+# .nuget/packages/
+# *.[Pp]ackages/
+# packages/
+
+# Ignore publish output (optional)
+publish/
