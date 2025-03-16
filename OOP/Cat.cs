@@ -1,6 +1,6 @@
 namespace OOP;
 
-public class Cat
+public class Cat : Animal
 {
-    
+    private string Name;
 }
