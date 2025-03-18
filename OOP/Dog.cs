@@ -10,7 +10,7 @@ public class Dog : Animal
         Age:
         try
         {
-            Console.WriteLine("Please choose an age for your dog");
+            Console.WriteLine("Please choose how old your dog is in days");
             Age = int.Parse(Console.ReadLine()!);
         }
         catch (Exception)
@@ -84,5 +84,11 @@ public class Dog : Animal
     public void Kick()
     {
         
+    }
+    public void Rename(string password)
+    {
+        if (password != Person.Password) return;
+        Console.WriteLine("Please choose a name for your cat");
+        _name = Console.ReadLine();
     }
 }

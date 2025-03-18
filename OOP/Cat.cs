@@ -1,8 +1,7 @@
 namespace OOP;
-
 public class Cat : Animal
 {
-    private static string _name;
+    private static string? _name;
     
     public static void CreateCat()
     {
@@ -11,7 +10,7 @@ public class Cat : Animal
         Age:
         try
         {
-            Console.WriteLine("Please choose an age for your cat");
+            Console.WriteLine("Please choose how old your cat in days");
             Age = int.Parse(Console.ReadLine()!);
         }
         catch (Exception)
@@ -81,5 +80,11 @@ public class Cat : Animal
     public void Kick()
     {
         
+    }
+    public void Rename(string password)
+    {
+        if (password != Person.Password) return;
+        Console.WriteLine("Please choose a name for your cat");
+        _name = Console.ReadLine();
     }
 }
