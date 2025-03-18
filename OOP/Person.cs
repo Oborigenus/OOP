@@ -2,19 +2,23 @@ namespace OOP;
 
 public class Person
 {
-    private string Name;
-    private int Age;
-
-    public void SetName(string name)
+    private string? _name;
+    private int _age;
+    private string? _password;
+    
+    public void SetName(string? name)
     {
-        Name = name;
-        Console.WriteLine(Name);
+        _name = name;
     }
 
     public void SetAge(int age)
     {
-        Age = age;
-        Console.WriteLine(Age);
+        _age = age;
+    }
+
+    public void SetPassword(string? password)
+    {
+        _password = password;
     }
 
     public void Pet()
@@ -27,8 +31,14 @@ public class Person
         
     }
 
-    public void CreateAnimal()
+    public void ToBed()
     {
         
     }
+
+    public void Rename()
+    {
+        
+    }
+
 }

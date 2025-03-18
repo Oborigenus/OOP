@@ -4,8 +4,8 @@ namespace OOP;
 
 public class Animal
 {
-    private int Age;
-    private int Satiety;
-    public string Mood;
-    private Color Color;
+    protected static int Age;
+    protected static int Satiety;
+    public static int Mood;
+    protected static string? Color;
 }
