@@ -20,7 +20,7 @@ Person.SetPassword(password);
 Console.WriteLine("Now you can create a dog or a cat");
 TryAgain:
 Console.WriteLine("To choose you must type 1 for a dog or 2 for a cat");
-var choice = 0;
+int choice;
 try
 {
     var temp = Convert.ToInt32(Console.ReadLine());
@@ -57,52 +57,40 @@ Console.WriteLine("1 for pet, 2 for feed, 3  for put to bed , 4 for rename , 5 f
 try
 {
     var choice2 = Convert.ToInt32(Console.ReadLine());
+    if (choice2 != 1 && choice2 != 2 && choice2 != 3 && choice2 != 4 && choice2 != 5 && choice2 != 6)
+    {
+        Console.WriteLine("Wrong input, please try again");
+        goto Again;
+    }
     switch (choice2)
     {
         case 1:
         {
             Person.Pet(choice);
-            if (choice == 1)
-            {
-                Dog.Bark();
-            }
-            else
-            {
-               Cat.Bark(); 
-            }
             goto Again;
         }
         case 2:
         {
             Person.Feed(choice);
-            if (choice == 1)
-            {
-                Dog.Poop();
-            }
-            else
-            {
-                Cat.Poop(); 
-            }
             goto Again;
         }
         case 3:
         {
             Person.ToBed(choice);
-            if (choice == 1)
-            {
-                Dog.Kick();
-            }
-            else
-            {
-                Cat.Kick(); 
-            }
             goto Again;
         }
         case 4:
         {
             Console.WriteLine("To change the name of your pet you need to type in your exact password");
             password = Console.ReadLine();
-            Person.Rename(choice, password);
+            if (password != Person.Password)
+            {
+                Console.WriteLine("Passwords don't match, please try again");
+                goto Again;
+            }
+            Console.WriteLine("Password confirmed, Now type in the new name for your pet");
+            name = Console.ReadLine();
+            Person.Rename(choice, name);
             goto Again;
         }
         case 5:

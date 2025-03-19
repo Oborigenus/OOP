@@ -1,12 +1,12 @@
 namespace OOP;
 public class Cat : Animal
 {
-    private static string? _name;
+    internal static string? Name;
     
     public static void CreateCat()
     {
         Console.WriteLine("Please choose a name for your cat");
-        _name = Console.ReadLine();
+        Name = Console.ReadLine();
         Age:
         try
         {
@@ -69,22 +69,18 @@ public class Cat : Animal
     }
     public static void Bark()
     {
-        
+        Console.WriteLine("Your cat is meowing, It's now wants to be interacted with");
+        Mood -= 1;
     }
     
     public static void Poop()
     {
-        
+        Console.WriteLine("Unfortunately, your cat pooped, It now wants to eat");
+        Satiety -= 1;
     }
     
     public static void Kick()
     {
-        
-    }
-    public void Rename(string password)
-    {
-        if (password != Person.Password) return;
-        Console.WriteLine("Please choose a name for your cat");
-        _name = Console.ReadLine();
+        Console.WriteLine("Cat is kicking because of excessive energy, nothing happened");
     }
 }
