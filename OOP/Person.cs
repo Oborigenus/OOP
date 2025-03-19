@@ -80,4 +80,14 @@ public class Person
                 break;
         }
     }
+
+    public static void Rename(int choice , string? password)
+    {
+        
+    }
+
+    public static void ShowStats(int choice)
+    {
+        
+    }
 }

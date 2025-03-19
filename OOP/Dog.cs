@@ -71,17 +71,17 @@ public class Dog : Animal
         
     }
     
-    public void Bark()
+    public static void Bark()
     {
         
     }
     
-    public void Poop()
+    public static void Poop()
     {
         
     }
     
-    public void Kick()
+    public static void Kick()
     {
         
     }

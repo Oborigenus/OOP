@@ -67,17 +67,17 @@ public class Cat : Animal
         Console.WriteLine("Please choose a color for your cat");
         Color = Console.ReadLine();
     }
-    public void Bark()
+    public static void Bark()
     {
         
     }
     
-    public void Poop()
+    public static void Poop()
     {
         
     }
     
-    public void Kick()
+    public static void Kick()
     {
         
     }
